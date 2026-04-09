@@ -347,7 +347,7 @@
 
         /* BOTÓN ZOOM */
         .btn-zoom {
-            display: none;
+            display: block;
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -374,16 +374,95 @@
             }
         }
 
+        /* BOTÓN WHATSAPP */
+        .btn-whatsapp {
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            right: 140px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            padding: 10px 14px;
+            border: none;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s;
+            text-decoration: none;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+
         body.zoomed {
+            font-size: 20px;
+        }
+
+        body.zoomed .container {
             font-size: 18px;
         }
 
+        body.zoomed .header h1 {
+            font-size: 28px;
+        }
+
+        body.zoomed .header h2 {
+            font-size: 20px;
+        }
+
+        body.zoomed .resumen-texto h3 {
+            font-size: 18px;
+        }
+
+        body.zoomed .resumen-texto p {
+            font-size: 16px;
+        }
+
         body.zoomed table {
-            font-size: 12px !important;
+            font-size: 14px !important;
+        }
+
+        body.zoomed table th, body.zoomed table td {
+            padding: 8px !important;
+        }
+
+        body.zoomed .grafica-box h4 {
+            font-size: 16px;
         }
 
         body.zoomed .grafica-box p {
-            font-size: 12px !important;
+            font-size: 14px !important;
+        }
+
+        body.zoomed .ahorro-section h3 {
+            font-size: 18px;
+        }
+
+        body.zoomed .ahorro-detalle p {
+            font-size: 16px;
+        }
+
+        body.zoomed .caso-exito h4 {
+            font-size: 16px;
+        }
+
+        body.zoomed .caso-exito p {
+            font-size: 14px;
+        }
+
+        body.zoomed .total-ahorro .valor {
+            font-size: 36px;
+        }
+
+        body.zoomed .kpi-box {
+            font-size: 15px;
         }
 
         /* IMPRESIÓN */
@@ -392,6 +471,10 @@
                 margin: 0;
                 padding: 0;
                 background: white;
+            }
+
+            .btn-zoom, .btn-whatsapp {
+                display: none;
             }
 
             .page {
@@ -636,6 +719,7 @@
 </head>
 <body>
     <button class="btn-zoom" onclick="toggleZoom()">🔍 Zoom</button>
+    <a href="https://wa.me/5527044506?text=Tengo%20dudas%20sobre%20el%20Informe%20de%20Becarios%20Price%20Shoes" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
     
     <div class="container">
         <!-- PÁGINA 1 -->
